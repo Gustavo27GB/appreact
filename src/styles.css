@@ -1,0 +1,131 @@
+body {
+  font-family: 'Times New Roman', Times, serif, sans-serif;
+  background: linear-gradient(to right, #ffecd2 0%, #ffffff 150%);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 20px;
+  background: #ffecd2 ;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+header, footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.form-container {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #ffffffaf;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form label, form input, form button {
+  margin-bottom: 10px;
+}
+
+form input, form button {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #000000;
+}
+
+form button {
+  background-color: #333;
+  color: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #555;
+}
+
+.student-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.student-item {
+  flex: 1 1 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  box-sizing: border-box;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.student-item img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.student-item.red {
+  background-color: #cce2baef;
+}
+
+.remove-button {
+  color: red;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    flex-direction: row;
+  }
+  .form-container {
+    flex: 0 0 40%;
+    margin-right: 20px;
+  }
+  .student-list {
+    flex: 0 0 60%;
+  }
+  .student-item {
+    flex: 1 1 calc(33.33% - 20px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .form-container {
+    flex: 0 0 30%;
+    margin-right: 20px;
+  }
+  .student-list {
+    flex: 0 0 70%;
+  }
+  .student-item {
+    flex: 1 1 calc(25% - 20px);
+  }
+}
